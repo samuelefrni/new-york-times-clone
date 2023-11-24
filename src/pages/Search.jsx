@@ -8,7 +8,7 @@ import ArticleCSS from "../CSSModule/Article.module.css"
 
 const Search = ({ query }) => {
     const [searchArticles, setSearchArticles] = useState();
-    
+
     const searchRequest = axios.create({
         baseURL: `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=${cred.API_SEARCH}`
     })
@@ -37,36 +37,36 @@ const Search = ({ query }) => {
     if (searchQuery.isSuccess && searchArticles < 1) return <>
         <section style={{ textAlign: "center", padding: 10, fontSize: 50, fontFamily: "Times new Roman", fontWeight: 900 }}>
             <TbFaceIdError />
-            <p style={{fontSize: 20}}>I couldn't find anything</p>
+            <p style={{ fontSize: 20 }}>I couldn't find anything</p>
         </section >
     </>
 
     return (
-    <>
-        {
-            searchQuery.isSuccess && searchArticles &&
-            searchArticles.map((items) => {
-                return (
-                    <article key={items.uri} className={ArticleCSS.article}>
-                        {
-                            items.abstract && items.lead_paragraph &&
-                            <a href={items.web_url} target="_blank">
-                                <h3 className={ArticleCSS.h3}>{items.abstract}</h3>
-                                <p className={ArticleCSS.firstP}>{items.lead_paragraph}</p>
-                                <div className={ArticleCSS.containerInfo}>
-                                    <p className={ArticleCSS.secondP}>{items.byline.original}</p>
-                                    <p className={ArticleCSS.thirdP}>{items.pub_date.slice(0, 10)}</p>
-                                </div>
-                                <hr className={ArticleCSS.hr} />
-                            </a>
-                        }
-                    </article>
-                )
-            })
+        <>
+            {
+                searchQuery.isSuccess && searchArticles &&
+                searchArticles.map((items) => {
+                    return (
+                        <article key={items.uri} className={ArticleCSS.article}>
+                            {
+                                items.abstract && items.lead_paragraph &&
+                                <a href={items.web_url} target="_blank">
+                                    <h3 className={ArticleCSS.h3}>{items.abstract}</h3>
+                                    <p className={ArticleCSS.firstP}>{items.lead_paragraph}</p>
+                                    <div className={ArticleCSS.containerInfo}>
+                                        <p className={ArticleCSS.secondP}>{items.byline.original}</p>
+                                        <p className={ArticleCSS.thirdP}>{items.pub_date.slice(0, 10)}</p>
+                                    </div>
+                                    <hr className={ArticleCSS.hr} />
+                                </a>
+                            }
+                        </article>
+                    )
+                })
 
-        }
-    </>
-)
+            }
+        </>
+    )
 }
 
 export default Search

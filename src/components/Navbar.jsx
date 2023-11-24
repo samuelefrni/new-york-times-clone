@@ -11,7 +11,7 @@ import NavbarCSS from "../CSSModule/Navbar.module.css"
 const Navbar = () => {
     const date = new Date();
     const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-    const formattedDate = date.toLocaleDateString(undefined, options);
+    const formattedDate = date.toLocaleDateString("en-US", options);
 
     const [isOpen, setIsOpen] = useState(false);
     const [input, setInput] = useState("");
@@ -34,6 +34,15 @@ const Navbar = () => {
     return (
         <>
             <nav className={NavbarCSS.nav}>
+                <section className={NavbarCSS.containerLanguage}>
+                    <ul className={NavbarCSS.ulLanguage}>
+                        <li style={{fontWeight: 600}}>U.S.</li>
+                        <a href="https://www.nytimes.com/international/"><li>International</li></a>
+                        <a href="https://www.nytimes.com/ca/"><li>Canada</li></a>
+                        <a href="https://www.nytimes.com/es/"><li>Español</li></a>
+                        <a href="https://cn.nytimes.com/"><li>中文</li></a>
+                    </ul>
+                </section>
                 <CiSearch className={isOpen ? NavbarCSS.iconClose : NavbarCSS.searchIcon} onClick={handleClick} />
                 <IoMdMenu className={isOpen ? NavbarCSS.iconClose : NavbarCSS.menuIcon} onClick={handleClick} />
                 {
@@ -43,10 +52,11 @@ const Navbar = () => {
                     /> : null
                 }
                 <img className={NavbarCSS.img} src={logo} alt="New York Times" />
-                <FaUser className={NavbarCSS.userIcon} />
+                <a href="https://myaccount.nytimes.com/auth/login"><FaUser className={NavbarCSS.userIcon} /></a>
             </nav>
             <header className={NavbarCSS.header}>
-                <p className={NavbarCSS.p}>{formattedDate}</p>
+                <p className={NavbarCSS.pDate}>{formattedDate}</p>
+                <p className={NavbarCSS.pPaper}>Today's Paper</p>
                 <ul className={NavbarCSS.ulNav}>
                     <Link to="/">
                         <li>Home</li>

@@ -7,7 +7,7 @@ import ArticleCSS from "../CSSModule/Article.module.css"
 const Home = () => {
     const query = "home";
     const [topStories, setTopStories] = useState();
-
+    
     const serachTopStoriesRequest = axios.create({
         baseURL: `https://api.nytimes.com/svc/topstories/v2/${query}.json?api-key=${cred.API_TOP_STORIES}`
     })
@@ -17,12 +17,12 @@ const Home = () => {
         queryFn: () => serachTopStoriesRequest.get().then(response => setTopStories(response.data.results)),
     })
 
-    return <>
+    return <div className={ArticleCSS.articleContainer}>
         {
             searchTopStoriesQuery.isSuccess && topStories &&
-            topStories.map((items) => {
+            topStories.map((items, index) => {
                 return (
-                    <article key={items.url} className={ArticleCSS.article}>
+                    <article key={items.url} className={`${ArticleCSS.article} ${index % 4 === 0 ? ArticleCSS.fullWidth : null}`}>
                         <a href={items.url} target="_blank">
                             <h3 className={ArticleCSS.h3}>{items.title}</h3>
                             <p className={ArticleCSS.firstP}>{items.abstract}</p>
@@ -34,7 +34,7 @@ const Home = () => {
                 )
             })
         }
-    </>
+    </div>
 }
 
 export default Home

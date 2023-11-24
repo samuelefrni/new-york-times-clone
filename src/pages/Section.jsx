@@ -41,12 +41,12 @@ const Section = () => {
         </section>
     </>
 
-    return <>
+    return <div className={ArticleCSS.articleContainer}>
         {
             searchArticlesQuery.isSuccess && sectionArticle &&
-            sectionArticle.map((items) => {
+            sectionArticle.map((items, index) => {
                 return (
-                    <article key={items.url} className={ArticleCSS.article}>
+                    <article key={items.url} className={`${ArticleCSS.article} ${index % 4 === 0 ? ArticleCSS.fullWidth : null}`}>
                         {
                             items.abstract &&
                             <a href={items.url} target="_blank">
@@ -64,7 +64,7 @@ const Section = () => {
                 )
             })
         }
-    </>
+    </div>
 }
 
 export default Section

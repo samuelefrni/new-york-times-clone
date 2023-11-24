@@ -30,3 +30,15 @@
     max-width: 100%;
     margin: 10px 0;
 }
+
+@media only screen and (min-width: 1200px) {
+    .articleContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .fullWidth{
+        grid-column: span 3;
+    }
+}
