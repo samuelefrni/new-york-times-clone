@@ -1,0 +1,48 @@
+.footer {
+    padding: 20px;
+}
+
+.img {
+    max-width: 60%;
+    margin-bottom: 20px;
+}
+
+.containerDivGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.containerDivGrid li {
+    font-size: 14px;
+    font-family: Helvetica;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.p {
+    font-size: 11px;
+    text-align: center;
+    color: #666666;
+    padding: 10px;
+}
+
+@media only screen and (min-width: 800px) {
+    .containerDivGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .img{
+        max-width: 455px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .containerDivGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

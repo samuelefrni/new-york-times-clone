@@ -1,0 +1,142 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.img {
+    width: 50%;
+}
+
+.menuIcon {
+    font-size: 20px;
+}
+
+.searchIcon {
+    display: none;
+}
+
+.closeIcon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.userIcon {
+    font-size: 20px;
+}
+
+.header {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: #F7F7F7;
+    text-transform: capitalize;
+    height: 36.8px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.p {
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.ulNav {
+    display: none;
+}
+
+.form {
+    text-align: center;
+    padding: 20px;
+}
+
+.input {
+    padding: 5px;
+}
+
+.button {
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.ulForm li {
+    font-size: 14px;
+    font-family: Helvetica;
+    list-style-type: none;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.section {
+    padding: 10px 20px;
+}
+
+.queryResult {
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.isClose {
+    display: none;
+}
+
+.iconClose {
+    display: none;
+}
+
+@media only screen and (min-width: 1070px) {
+    .img {
+        width: 500px;
+    }
+
+    .menuIcon {
+        display: none;
+    }
+
+    .searchIcon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .closeIcon {
+        font-size: 30px;
+    }
+
+    .userIcon {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .header {
+        background-color: white;
+        justify-content: center;
+    }
+
+    .p {
+        display: none;
+    }
+
+    .ulNav {
+        display: flex;
+    }
+
+    .ulNav li {
+        font-size: 14px;
+        font-family: Helvetica;
+        list-style-type: none;
+        padding: 10px;
+    }
+
+    .ulForm li {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .ulNav li {
+        padding: 20px;
+    }
+}

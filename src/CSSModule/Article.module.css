@@ -1,0 +1,32 @@
+.article {
+    padding: 20px;
+}
+
+.firstP {
+    color: #5A5A5A;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.secondHomeP {
+    color: #727272;
+    font-size: 11px;
+    padding: 8px 0;
+    text-align: end;
+}
+
+.containerInfo {
+    color: #727272;
+    font-size: 11px;
+    padding: 8px 0;
+    display: flex;
+}
+
+.thirdP {
+    margin-left: auto;
+}
+
+.img {
+    max-width: 100%;
+    margin: 10px 0;
+}
