@@ -11,7 +11,7 @@
 }
 
 .img {
-    width: 50%;
+    width: 60%;
 }
 
 .menuIcon {
@@ -35,7 +35,6 @@
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     background-color: #F7F7F7;
-    text-transform: capitalize;
     height: 36.8px;
     padding: 10px 20px;
     display: flex;
@@ -67,14 +66,15 @@
 .button {
     padding: 5px;
     margin-left: 5px;
+    background-color: #567B95;
+    color: white;
 }
 
 .ulForm li {
     font-size: 14px;
     font-family: Helvetica;
     list-style-type: none;
-    margin-bottom: 20px;
-    padding: 20px;
+    margin: 50px;
 }
 
 .section {

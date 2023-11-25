@@ -27,7 +27,7 @@ const Home = () => {
                             <h3 className={ArticleCSS.h3}>{items.title}</h3>
                             <p className={ArticleCSS.firstP}>{items.abstract}</p>
                             <img className={ArticleCSS.img} src={items.multimedia && items.multimedia[0].url} alt="" />
-                            <p className={ArticleCSS.secondHomeP}>{items.byline}</p>
+                            <p className={ArticleCSS.pByLineHome}>{items.byline}</p>
                             <hr className={ArticleCSS.hr} />
                         </a>
                     </article>
