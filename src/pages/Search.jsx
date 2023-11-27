@@ -30,7 +30,7 @@ const Search = ({ query }) => {
     if (searchQuery.isError) return <>
         <section style={{ textAlign: "center", padding: 10, fontSize: 50, fontFamily: "Times new Roman", fontWeight: 900 }}>
             <TbFaceIdError />
-            <p>404</p>
+            <p>Too Many Requests</p>
         </section>
     </>
 
