@@ -12,8 +12,7 @@
 
 ## About The Project
 
-The "New York Times Clone" is a web application that replicates the New York Times website.<br />
-It allows users to browse articles, view the latest news, and explore various sections, just like the original New York Times website.
+The "New York Times Clone" is a web application that replicates the New York Times website. It allows users to browse articles, view the latest news, and explore various sections, just like the original New York Times website.
 
 ### Built With
 
