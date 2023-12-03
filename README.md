@@ -3,14 +3,21 @@
 <div align="center">
   <h2 align="center">The New York Times</h2>
 
+  <!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+  
   <p align="center">
     <br />
     <a href="https://samuelefrni-new-york-times.netlify.app/"><strong>View Demo</strong></a>
     <br />
+    <br />
     <a href="./src/assets/Progetto React di Samuele Furnari.pdf">Presentation EN</a>
-    <br />
+    .
     <a href="./src/assets/Progetto React di Samuele Furnari.pdf">Presentation IT</a>
-    <br />
   </p>
 </div>
 
