@@ -8,8 +8,6 @@
     <a href="https://samuelefrni-new-york-times.netlify.app/"><strong>View Demo</strong></a>
     <br />
     <br />
-    <a href="./src/assets/Progetto React di Samuele Furnari.pdf">Presentation EN</a>
-    .
     <a href="./src/assets/Progetto React di Samuele Furnari.pdf">Presentation IT</a>
   </p>
 </div>
@@ -48,7 +46,7 @@ To use the "New York Times Clone" follow these simple steps:
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE.md](link-to-license.md) file for details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT)
 
 ## Contact
 
